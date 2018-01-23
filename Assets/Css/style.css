@@ -32,9 +32,9 @@ body {
 .nav-bar {
 	width: 100vw;
 	height: 9vh;
-	top: 2vh;
+	top: 0;
 	left: 0;
-	padding: 0 2.5vw 0 2vw;
+	padding: 2vh 2.5vw 0 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -46,6 +46,10 @@ body {
 	height: 50px;
 	flex-grow: 1;
 	flex-basis: 0;
+}
+
+.nav-left > svg {
+	padding-left: 2vw;
 }
 
 .nav-find-me {
@@ -169,13 +173,12 @@ body {
 }
 
 .section-2 > .content-title {
-	margin: 10vh 15vw 0 0;
+	margin: 10vh 15vw -5vh 0;
 }
 
 .project-display {
 	width: 90%;
 	height: 50%;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 3px 1px -2px rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.22);
 }
 
 .project-tabs {
@@ -209,32 +212,32 @@ body {
 	width: 100%;
 	height: 100%;
 	background-image: url('../Images/lll.png');
-	background-position: center;
+	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-.template-container {
-	width: 100%;
-	height: 115%;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 3px 1px -2px rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.22);
 }
 
 .count {
 	font-size: 15rem;
 	width: fit-content;
-	color: rgba(117, 100, 100, 0.7);
+	position: relative;
+	top: -122%;
+	left: 13%;
+	color: rgba(117, 100, 100, 0.8);
 	font-family: 'Playfair Display', serif;
-	transform: translate(190%, -40%);
 }
 
 .outer-image {
 	width: calc(1000px / 1.3);
 	height: calc(600px / 1.3);
+	position: relative;
+	top: -70%;
+	left: 40%;
 	background-image: url('../Images/macbook-template.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	transform: translate(60%, 30%);
 }
 
 .inner-image {
@@ -280,62 +283,130 @@ body {
 
 .section-3 {
 	width: 100vw;
-	height: 50vh;
 	margin-top: 25vh;
-	margin-bottom: 5rem;
 }
 
 .section-3 > .content-title {
 	text-align: center;
-	margin-bottom: 6rem;
+	margin-bottom: 12vh;
 }
 
-.section-3-content {
-	width: 100%;
-	height: 70%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-.row-1 {
-	width: 100%;
-	height: 70%;
+.skills-container {
+	width: 100vw;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
+}
+
+.col-1 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-right: 1rem;
+}
+
+.col-2 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-left: 1rem;
+}
+
+.skill-progress {
+	width: 40vw;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+}
+
+.progress-bar {
+	width: 100%;
+	height: 1rem;
+	border-radius: 1rem;
+	border: 1px solid black;
+}
+
+.progress-amount {
+	height: 100%;
+	border-radius: inherit;
+	background-color: purple;
+}
+
+.inner-progress-css {
+	width: 84%;
+}
+
+.inner-progress-sass {
+	width: 62%;
+}
+
+.inner-progress-html {
+	width: 92%;
+}
+
+.inner-progress-pug {
+	width: 48%;
+}
+
+.inner-progress-javascript {
+	width: 85%;
+}
+
+.inner-progress-vue {
+	width: 63%;
 }
 
 .skill {
-	height: 100%;
-	flex-grow: 1;
-	flex-basis: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 3px;
-	box-shadow: -1px 0 1px black;
-	background: linear-gradient(to right, white, rgba(0, 0, 0, 0.075));
+	width: 10vh;
+	height: 10vh;
 }
 
 .skill > img {
+	width: 100%;
 	height: 100%;
 }
 
-.skill-js > img {
-	height: 81%;
-}
-
-.content-form {
-	width: 100vw;
-	height: 20vh;
-	padding-left: 7vw;
+.skill-js {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.content-form > div {
+.skill-js > img {
+	width: 82%;
+	height: 82%;
+}
+
+.divider {
+	width: 6vh;
+	height: 1px;
+	margin: 1rem 0 1rem 0;
+	background-color: rgb(161, 160, 160);
+}
+
+.divider-medium {
+	width: 20vw;
+	height: 1px;
+	margin: 1rem 0 1rem 0;
+	background-color: rgb(161, 160, 160);
+}
+
+.divider-large {
+	width: 90vw;
+	height: 1px;
+	margin: 10vh auto;
+	background-color: rgb(161, 160, 160);
+}
+
+.contact-form {
+	width: 100vw;
+	height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-form > div {
 	width: 15%;
 	height: 70%;
 	padding: 1rem;
@@ -345,19 +416,21 @@ body {
 	justify-content: space-between;
 }
 
-.content-form > div > p {
+.contact-form > div > p {
 	letter-spacing: 1px;
 	font-weight: 100;
 }
 
-.content-form > div > input {
+.contact-form > div > input {
 	width: 100%;
 	height: 50%;
 	outline: none;
 	padding: .5rem .75rem .5rem .75rem;
+	background-color: rgb(252, 252, 252);
+	border: 1px solid rgba(128, 128, 128, 0.568);
 }
 
-.content-form > div > textarea {
+.contact-form > div > textarea {
 	width: 100%;
 	max-width: 100%;
 	min-width: 100%;
@@ -365,12 +438,21 @@ body {
 	max-height: 50%;
 	min-height: 50%;
 	outline: none;
+	background-color: rgb(252, 252, 252);
+	border: 1px solid rgba(128, 128, 128, 0.568);
 }
 
-.content-form > div:nth-child(4) {
+.contact-form > div:nth-child(4) {
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-end;
+}
+
+.form-submit {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
 }
 
 #sub {
@@ -389,5 +471,8 @@ body {
 	justify-content: center;
 	letter-spacing: 1px;
 	font-weight: 100;
+	margin-top: 13vh;
 	background-color: rgb(27, 27, 27);
 }
+
+/* ---------- Default HTML Tags ---------- */
